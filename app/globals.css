@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --background: #1a1614;
+  --surface: #2a2320;
+  --accent: #c4856a;
+  --text-primary: #f5ede6;
+  --text-secondary: #a89888;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Aeonik', system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+.shadow-neumorphic {
+  box-shadow: 8px 8px 16px rgba(0,0,0,0.4), -8px -8px 16px rgba(60,50,42,0.15);
+}
+
+.shadow-neumorphic-inset {
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3), inset -2px -2px 4px rgba(60,50,42,0.1);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
