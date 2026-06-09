@@ -20,6 +20,13 @@ TOKEN = os.environ.get("APIFY_TOKEN")
 ACTOR = os.environ.get("APIFY_ACTOR", "curious_coder~facebook-ads-library-scraper")
 COUNTRY = "BR"
 
+# Solo nos interesan ads de Invisalign / ortodoncia invisible. Un ad pasa el
+# filtro si su metadata menciona alguna keyword, o si pertenece a la lista
+# invisalign_ad_ids del inventario, o si su página es "keyword-opaque"
+# (páginas chicas donde el copy no menciona el producto pero el video sí
+# puede hacerlo — esos se filtran después con la transcripción).
+KEYWORDS = ("invisalign", "alinhador", "invisível", "invisivel", "ortodontia")
+
 if not TOKEN:
     sys.exit("Falta APIFY_TOKEN en el entorno.")
 
@@ -91,6 +98,16 @@ def download(url: str, dest: Path) -> bool:
         return False
 
 
+def is_invisalign_ad(item: dict, comp: dict) -> bool:
+    ad_id = find_ad_id(item)
+    if ad_id in comp.get("invisalign_ad_ids", []):
+        return True
+    if comp.get("keyword_opaque"):  # página chica: decidir post-transcripción
+        return True
+    blob = json.dumps(item, ensure_ascii=False).lower()
+    return any(k in blob for k in KEYWORDS)
+
+
 def main():
     inventory = json.loads((BASE / "inventory.json").read_text())
     summary = []
@@ -103,6 +120,11 @@ def main():
             print(f"  ! actor falló: {e}")
             summary.append({"ref": ref, "error": str(e)})
             continue
+
+        if isinstance(items, list):
+            before = len(items)
+            items = [it for it in items if is_invisalign_ad(it, comp)]
+            print(f"  filtro invisalign: {len(items)}/{before} ads")
 
         (BASE / "data").mkdir(parents=True, exist_ok=True)
         (BASE / "data" / f"{ref}.json").write_text(

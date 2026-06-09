@@ -5,6 +5,16 @@ description: Pipeline completo de revisión de ads de competencia - busca ads ac
 
 # Revisión de Ads de Competencia (pipeline)
 
+## ALCANCE — solo Invisalign / ortodoncia invisible
+Únicamente interesan los anuncios de **Invisalign u ortodoncia invisible**
+(keywords PT: invisalign, alinhador(es), ortodontia/aparelho invisível).
+Ignorar implantes, lentes/facetas, clareamento, harmonização, etc.
+- El inventario tiene `invisalign_ad_ids` por competidor (pre-filtrado vía
+  API con search_terms) y el script de descarga filtra por keywords.
+- Páginas marcadas `keyword_opaque` (copy genérico): descargar todo y
+  decidir DESPUÉS de transcribir — descartar transcripciones que no traten
+  ortodoncia invisible y marcarlas "fuera de alcance" en el anexo.
+
 ## Prerrequisitos del entorno
 - Allowlist de red debe incluir: `api.apify.com`, `*.fbcdn.net`,
   `huggingface.co`, `*.huggingface.co`, `*.hf.co` (o acceso total).
