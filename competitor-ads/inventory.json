@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-06-09",
+  "source": "Meta Ad Library API (via MCP) — sheet: 1jXBniJZx42zYGLjSevdDL17xYXZmCqkQjyKErHyHPD4",
+  "country": "BR",
+  "status_filter": "ACTIVE",
+  "scope": "SOLO Invisalign / ortodoncia invisible. invisalign_ad_ids = union de búsquedas API con search_terms [invisalign, alinhador, invisível] por página. keyword_opaque=true => página chica con copy genérico: descargar todo y filtrar post-transcripción.",
+  "competitors": [
+    {
+      "reference": "aaamulticlin",
+      "page_id": "111825536906783",
+      "page_name": "aaamulticlin",
+      "active_ads_count": 12,
+      "invisalign_ad_ids": [
+        "1015840234475344", "4086062531529607", "1003111455501389",
+        "1327796882498077", "2129553487583354", "1613979696255409",
+        "918615203909918", "1216235657006478", "901199565707795"
+      ],
+      "notes": "9/12 ads matchean invisalign. Ad 4086062531529607: 'INVISALIGN PARA VOCÊ'"
+    },
+    {
+      "reference": "Dra Patricia Mello",
+      "page_id": "101222862047217",
+      "page_name": "Dra Patricia Mello",
+      "active_ads_count": 5,
+      "keyword_opaque": true,
+      "ad_ids": [
+        "4141537006112751", "1497377354564363", "1012897671029456",
+        "1298479384651886", "1282094136439006"
+      ]
+    },
+    {
+      "reference": "Cecilia Crepaldi",
+      "page_id": "561825487018122",
+      "page_name": "Dra. Cecilia Crepaldi",
+      "active_ads_count": 4,
+      "keyword_opaque": true,
+      "ad_ids": [
+        "1419879659907007", "1270817386108720", "746086718538945",
+        "755899406938388"
+      ],
+      "notes": "Título recurrente: 'Maior Referência em Barretos🏆'"
+    },
+    {
+      "reference": "Massa Odontologia",
+      "page_id": "536084189797212",
+      "page_name": "Massa Odontologia",
+      "active_ads_count": 54,
+      "invisalign_ad_ids": [
+        "1006406855409576", "1499419201882717", "996771272755900",
+        "1304662861841643", "815596154953993", "3004236973099356",
+        "1247647254021418", "3091118007747127", "2047134202683179",
+        "2328914427593396", "1932880834296533", "2659907267726422",
+        "1145410927706637", "3154074261429364", "1157307399824511",
+        "1397581785069671", "1332024745056422", "1369625678161777",
+        "2852864928254742", "827521073499244", "1208758751103923",
+        "1338084397455686", "1403839661455024"
+      ],
+      "notes": "23/54 ads matchean invisalign/alinhador. El mayor anunciante del set; lanza en batches; CTA 'Converse conosco'."
+    },
+    {
+      "reference": "Franco Marques",
+      "page_id": "297712220867254",
+      "page_name": "Franco Marques Odontologia",
+      "active_ads_count": 11,
+      "invisalign_ad_ids": [
+        "1551370999922655", "1521055149758057", "1483577959887195",
+        "1396043151870733"
+      ],
+      "notes": "4/11. Campaña activa: landing invisalign-voce-usa-ninguem-ve"
+    },
+    {
+      "reference": "Alda Lucía",
+      "page_id": "1436694043247183",
+      "page_name": "Dra Alda Lucia - Ceoom",
+      "active_ads_count": 5,
+      "keyword_opaque": true,
+      "ad_ids": [
+        "2172543210198421", "710482835130197", "1450551612963675",
+        "1157324235837807", "1883000202516230"
+      ]
+    },
+    {
+      "reference": "Trini odontologia",
+      "page_id": "1060080804133287",
+      "page_name": "Odontologia Trentini",
+      "active_ads_count": 2,
+      "keyword_opaque": true,
+      "ad_ids": ["4383847158529464", "3144905462358917"],
+      "notes": "CTA: 'TEM INTERESSE? APERTE'"
+    },
+    {
+      "reference": "a3 (GARANHUNS)",
+      "page_id": "117085921374497",
+      "page_name": "A3 Odontologia",
+      "active_ads_count": 17,
+      "invisalign_ad_ids": ["1509772821163613"],
+      "notes": "1/17 matchea invisalign (su ad más reciente). El resto es consulta general 'AGENDE AGORA'."
+    }
+  ],
+  "totals": {
+    "active_ads_all": 110,
+    "invisalign_keyword_matched": 37,
+    "pending_post_transcription_filter": 16
+  }
+}
